@@ -21,6 +21,16 @@ class Page {
         this.checkbox41 = Selector('#checkboxes > input[type=checkbox]:nth-child(1)');
         this.checkbox42 = Selector('#checkboxes > input[type=checkbox]:nth-child(3)');
         
+        //Selectores para Practica 5
+        this.link5 = Selector('a').withText('Inputs');
+        this.input51 = Selector('#content > div > div > div > input[type=number]'); 
+
+        //Selectors para Practica 6
+        this.link6 = Selector('a').withText('Add/Remove Elements');
+        this.addBtn61 = Selector('#content > div > button');
+        this.removeBtn62 = Selector('#elements > button')
+        this.removeBtn63 = Selector('#elements > button:nth-child(1)')
+        this.removeBtn64 = Selector('#elements > button:nth-child(2)')
     }
 }
 export default new Page();
