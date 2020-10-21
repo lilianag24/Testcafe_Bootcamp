@@ -10,9 +10,13 @@ test('Prueba para dar click en un enlace', async t =>{
         .click(page.link2)
 
     await t //Recarga la pagina y espera
-        if(page.text21.innerText == "A/B Test Control" || "A/B Test Variation" || "A/B Test Variation 1"){
+        const pageTitle = await page.text21.innerText;
+        console.log(pageTitle);
+        
+        if(pageTitle == "A/B Test Control" || pageTitle == "A/B Test Variation" || pageTitle == "A/B Test Variation 1"){
+            await t.expect(true).ok()
             console.log("La prueba paso")
         } else {
-            console.log("La prueba fallo")
+            await t.expect(false).ok("La prueba fallo, el texto: \"" +pageTitle+ "\" es diferente a los esperados")
         }
 });

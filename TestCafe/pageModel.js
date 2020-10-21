@@ -4,7 +4,8 @@ class Page {
     constructor(){
         //Selectores para Practica 2
         this.link2 = Selector('a').withText('A/B Testing');
-        this.text21 = Selector ('#content > div > h3');
+        //this.text21 = Selector ('#content > div > h3');
+        this.text21 = Selector ('h3');
         
         //Selectores para Practica 3
         this.link3 = Selector('a').withText('Forgot Password');
