@@ -30,8 +30,8 @@ class Page {
         this.link6 = Selector('a').withText('Add/Remove Elements');
         this.addBtn61 = Selector('#content > div > button');
         this.removeBtn62 = Selector('#elements > button');
-        this.removeBtn63 = Selector('#elements > button:nth-child(1)');
-        this.removeBtn64 = Selector('#elements > button:nth-child(2)');
+        //this.removeBtn63 = Selector('#elements > button:nth-child(1)');
+        //this.removeBtn64 = Selector('#elements > button:nth-child(2)');
 
         //Selectores para Practica 7
         this.input71 = Selector('#first-name');
@@ -49,6 +49,16 @@ class Page {
         this.button704 = Selector('a').withText('Submit');//('body > div > form > div > div:nth-child(15) > a'); 
         this.text705 = Selector('h1').withText('Thanks for submitting your form');
         this.text706 = Selector('body > div > div');
+
+        //Selectores Practica 8
+        this.link8 = Selector('a').withText('Form Authentication');
+        this.text81 = Selector('h2').withText('Login Page');
+        this.input82 = Selector('#username');
+        this.input83 = Selector('#password');
+        this.button84 = Selector('i').withText('Login');
+        this.alertMsg85 = Selector('#flash');
+        this.text86 = Selector('#content > div > h4');
+
 
         //Selectores Practica 9
         this.link9 = Selector('a').withText('Key Presses');
