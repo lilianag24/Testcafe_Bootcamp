@@ -59,7 +59,6 @@ class Page {
         this.alertMsg85 = Selector('#flash');
         this.text86 = Selector('#content > div > h4');
 
-
         //Selectores Practica 9
         this.link9 = Selector('a').withText('Key Presses');
         this.text91 = Selector('#result');
@@ -67,6 +66,19 @@ class Page {
         //Selectores Practica 10 
         this.link10 = Selector('a').withText('Context Menu');
         this.hotspot101 = Selector('#hot-spot');
+
+        //Selectores Practica 11
+        this.link11 = Selector('a').withText('Horizontal Slider');
+        this.slider11 = Selector('#content > div > div > input[type=range]');
+
+        //Selectore Practica 12
+        this.checkboxTried = Selector('#tried-test-cafe');
+        this.sliderObj = Selector('#slider');
+        this.slider = {
+            handle: Selector('.ui-slider-handle'),
+            value: Selector('.slider-value')
+        };
+    
     }
 }
 export default new Page();
