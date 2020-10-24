@@ -1,5 +1,7 @@
 import page from './pageModel'
 
+let total; 
+
 fixture('Practica 6 en Testcafe')
     .page('https://the-internet.herokuapp.com/');
 
@@ -51,22 +53,22 @@ test("Prueba validar el total de botones agregado", async t =>{
         .click(page.addBtn61)
         .click(page.addBtn61)
         .click(page.addBtn61)
-        const total = await page.removeBtn62.count; 
+        total = await page.removeBtn62.count; 
         console.log("Total obtenido: " + total + " - Total esperado: 3");
         await t.expect(total).eql(3)
         
         //Agregar 2 elementos adicionales y validar el total 
         .click(page.addBtn61)
         .click(page.addBtn61)
-        const total2 = await page.removeBtn62.count; 
-        console.log("Total obtenido: " + total2 + " - Total esperado: 5");
-        await t.expect(total2).eql(5)
+        total = await page.removeBtn62.count; 
+        console.log("Total obtenido: " + total + " - Total esperado: 5");
+        await t.expect(total).eql(5)
 
         //Borrar 3 elementos y validar el total 
         .click(page.removeBtn62)
         .click(page.removeBtn62)
         .click(page.removeBtn62)
-        const total3 = await page.removeBtn62.count; 
-        console.log("Total obtenido: " + total3 + " - Total esperado: 2");
-        await t.expect(total3).eql(2)
+        total = await page.removeBtn62.count; 
+        console.log("Total obtenido: " + total + " - Total esperado: 2");
+        await t.expect(total).eql(2)
 });
