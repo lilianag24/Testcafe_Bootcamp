@@ -12,6 +12,8 @@ class Page{
         this.firstName_Address = Selector('#firstname');
         this.lastName_Address = Selector('#lastname');
         this.address_input = Selector('#address1')
+        this.city = Selector('#city');
+        this.state = Selector('#uniform-id_state');
     }
 }
 
