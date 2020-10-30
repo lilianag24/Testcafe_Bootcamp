@@ -14,6 +14,11 @@ class Page{
         this.address_input = Selector('#address1')
         this.city = Selector('#city');
         this.state = Selector('#uniform-id_state');
+        this.zipCode = Selector('#postcode');
+        this.country = Selector('#id_country');
+        this.mobilePhone = Selector('#phone_mobile');
+        this.alias = Selector('#alias');
+        this.submitButton = Selector('#submitAccount');
     }
 }
 

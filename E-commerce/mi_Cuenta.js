@@ -14,13 +14,18 @@ test ('Crear una cuenta', async t => {
     await t
         .typeText(page.email_input, data.email)
         .click(page.createAccount_btn)
+        //.takeScreenshot()
 
     await t
+        //.maximizeWindow()
         .expect(page.email_form.value).contains(data.email)
         .expect(page.email_form.hasAttribute('readonly')).notOk() //Valida que el campo es editable
+        //.takeScreenshot()
 
         .typeText(page.firstName_input, data.firstName)
         .typeText(page.lastName_input, data.lastName)
+        //.takeElementScreenshot(page.firstName_input)
+        .setTestSpeed(1)
 
         .expect(page.firstName_Address.value).contains(data.firstName)
         .expect(page.lastName_Address.value).contains(data.lastName)
@@ -28,12 +33,14 @@ test ('Crear una cuenta', async t => {
         .typeText(page.password_input, data.password)
 
         .typeText(page.address_input, data.pbox)
-        .expect(page.address_input).contains(data.pbox)
+        .expect(page.address_input.value).contains(data.pbox)
 
         .typeText(page.city, data.city)
-        .expect(page.city).contains(data.city)
+        .expect(page.city.value).contains(data.city)
 
-        .typeText(page.address_input, data.pbox)
+        .click(page.state)
+
+
 });
 
 test ('Loggearse a un cuenta nueva', async t => {});
