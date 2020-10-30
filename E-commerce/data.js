@@ -8,7 +8,10 @@ let data = {
     password : "12345",
     pbox : "PO Box 123",
     city : "Los Angeles",
-    state : "California"
+    state : "California",
+    zipCode : "62985",
+    mobilePhone : "333-999-8888",
+    alias : "Mi Casa"
 }
 
 export {data}
