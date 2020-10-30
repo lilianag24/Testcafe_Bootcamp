@@ -14,6 +14,7 @@ class Page{
         this.address_input = Selector('#address1')
         this.city = Selector('#city');
         this.state = Selector('#uniform-id_state');
+        this.stateOption = Selector('#id_state > option')
         this.zipCode = Selector('#postcode');
         this.country = Selector('#id_country');
         this.mobilePhone = Selector('#phone_mobile');

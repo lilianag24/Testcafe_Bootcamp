@@ -39,8 +39,16 @@ test ('Crear una cuenta', async t => {
         .expect(page.city.value).contains(data.city)
 
         .click(page.state)
+        .click(page.stateOption.withText(data.state))
 
+        .typeText(page.zipCode, data.zipCode)
+        .expect(page.zipCode.value).contains(data.zipCode)
 
+        .typeText(page.mobilePhone, data.mobilePhone)
+        .expect(page.mobilePhone.value).contains(data.mobilePhone)
+
+        .typeText(page.alias, data.alias)
+        .expect(page.alias.value).contains(data.alias)
 });
 
 test ('Loggearse a un cuenta nueva', async t => {});
